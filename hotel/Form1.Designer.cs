@@ -42,7 +42,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
             this.txtRoomNo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -158,6 +157,7 @@
             this.btnRefresh.TabIndex = 1;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // label1
             // 
@@ -167,15 +167,6 @@
             this.label1.Size = new System.Drawing.Size(115, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Availability Status:";
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(989, 26);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(99, 16);
-            this.lblStatus.TabIndex = 5;
-            this.lblStatus.Text = "Fully Booked: 0";
             // 
             // txtRoomNo
             // 
@@ -220,7 +211,6 @@
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPlaceBooking);
             this.Controls.Add(this.mcCheckIn);
@@ -250,7 +240,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.TextBox txtRoomNo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox1;

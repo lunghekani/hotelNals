@@ -45,6 +45,18 @@ namespace hotel
             }
 
             objLogic.CreateBooking(name, lastname, addr, checkin, checkout, rate, roomNo, depositPaid);
+            var dt = objLogic.BookingsDataTable(); // CREATING A DATASOURCE FOR THE GRIDVIEW 
+
+            dataGridView1.DataSource = dt; // ASSIGNING THE GRIDVIEW
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            BusinessLogic objReadOps = new BusinessLogic();  // CREATING A LOCAL INSTANCE OF THE BUSINESS LAYER CLASS AND ITS MYSQL METHODS 
+
+            var dt = objReadOps.BookingsDataTable(); // CREATING A DATASOURCE FOR THE GRIDVIEW 
+
+            dataGridView1.DataSource = dt; // ASSIGNING THE GRIDVIEW
         }
     }
 }

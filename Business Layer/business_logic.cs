@@ -22,7 +22,7 @@ namespace Business_Layer
             var conn = objConn.CreateSQLConnection();
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = conn; // SETTING THE CONNECTION FOR THE COMMAND
-            cmd.CommandText = "Select g.FirstName, g.LastName, g.Address, b.RoomNo, b.CheckIn, b.CheckOut, b.Rate, b.DepositPaid from guest g inner join bookings b on g.Id = b.GuestId;"; // SETTING THE QUERY FOR THE COMMAND
+            cmd.CommandText = "Select FirstName, LastName, Address, RoomNo, CheckIn, CheckOut, Rate, DepositPaid from bookings;"; // SETTING THE QUERY FOR THE COMMAND
 
             MySqlDataReader sqlRead = cmd.ExecuteReader(); // USING THIS TO READ THE RESULTS FROM THE QUERY 
             try
