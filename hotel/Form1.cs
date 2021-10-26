@@ -27,5 +27,24 @@ namespace hotel
             dataGridView1.DataSource = dt; // ASSIGNING THE GRIDVIEW
 
         }
+
+        private void btnPlaceBooking_Click(object sender, EventArgs e)
+        {
+            BusinessLogic objLogic = new BusinessLogic();
+            string name = txtName.Text;
+            string lastname = txtLastName.Text;
+            string addr = txtAddress.Text;
+            DateTime checkin = mcCheckIn.SelectionStart;
+            DateTime checkout = mcCheckOut.SelectionStart;
+            string roomNo = txtRoomNo.Text;
+            int rate = objLogic.GetSeason(checkin);
+            int depositPaid = 0;
+            if (checkBox1.Checked)
+            {
+                depositPaid = 1;
+            }
+
+            objLogic.CreateBooking(name, lastname, addr, checkin, checkout, rate, roomNo, depositPaid);
+        }
     }
 }
