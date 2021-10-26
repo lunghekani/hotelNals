@@ -55,9 +55,7 @@ namespace Business_Layer
             cmd.Parameters.AddWithValue("@name_in", name);
             cmd.Parameters.AddWithValue("@lastname_in", lastname);
             cmd.Parameters.AddWithValue("@address_in", address);
-            cmd.Parameters.AddWithValue("@address_in", address);
-            cmd.Parameters.AddWithValue("@address_in", address);
-            cmd.Parameters.AddWithValue("@address_in", address);
+           
 
             MySqlTransaction myTrans;
 
